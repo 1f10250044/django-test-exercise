@@ -105,7 +105,7 @@ class TodoViewTestCase(TestCase):
         response = client.get('/{}/'.format(task.pk))
 
         self.assertEqual(response.status_code, 200)
-        self.assertEqual(response.templates[0].name, 'todo/index.html')
+        self.assertEqual(response.templates[0].name, 'todo/detail.html')
         self.assertEqual(response.context['tasks'], task)
 
     def test_index_get_order_due(self):

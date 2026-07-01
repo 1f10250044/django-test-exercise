@@ -106,7 +106,7 @@ class TodoViewTestCase(TestCase):
 
         self.assertEqual(response.status_code, 200)
         self.assertEqual(response.templates[0].name, 'todo/detail.html')
-        self.assertEqual(response.context['tasks'], task)
+        self.assertEqual(response.context['task'], task)
 
     def test_index_get_order_due(self):
         client = Client()
